@@ -17,9 +17,9 @@ public class MqttSenderCallback implements MqttCallback {
     }
 
     public void messageArrived(String topic, MqttMessage message) throws Exception {
-        System.out.println("Client 接收消息主题 : " + topic);
-        System.out.println("Client 接收消息Qos : " + message.getQos());
-        System.out.println("Client 接收消息内容 : " + new String(message.getPayload()));
+        System.out.println("ClientSender 接收消息主题 : " + topic);
+        System.out.println("ClientSender 接收消息Qos : " + message.getQos());
+        System.out.println("ClientSender 接收消息内容 : " + new String(message.getPayload()));
     }
 
     public void deliveryComplete(IMqttDeliveryToken token) {

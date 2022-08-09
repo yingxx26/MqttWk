@@ -26,13 +26,13 @@ public class MqttRecieveCallback implements MqttCallback {
     }
 
     public void messageArrived(String topic, MqttMessage message) throws Exception {
-        System.out.println("Client 接收消息主题 : " + topic);
-        System.out.println("Client 接收消息Qos : " + message.getQos());
-        System.out.println("Client 接收消息内容 : " + new String(message.getPayload()));
+        System.out.println("ClientRecieve 接收消息主题 : " + topic);
+        System.out.println("ClientRecieve 接收消息Qos : " + message.getQos());
+        System.out.println("ClientRecieve 接收消息内容 : " + new String(message.getPayload()));
         String devId = topic;
         if(topic.contains("/")){
             devId=topic.substring(topic.lastIndexOf("/")+1);
-            System.out.println("设备ID : " + devId);
+            System.out.println("Recieve设备ID : " + devId);
             IotDev iotDev=new IotDev();
             iotDev.setDevId(devId);
             iotDev.setDevData(new String(message.getPayload()));
