@@ -36,7 +36,7 @@ public class MqttRecieveCallback implements MqttCallback {
             IotDev iotDev=new IotDev();
             iotDev.setDevId(devId);
             iotDev.setDevData(new String(message.getPayload()));
-            insert(iotDev);
+            //insert(iotDev);
         }
 
     }
