@@ -63,6 +63,7 @@ public class Connect {
     }
 
     public void processConnect(Channel channel, MqttConnectMessage msg) {
+        System.out.println("连接processConnect");
         // 消息解码器出现异常
         if (msg.decoderResult().isFailure()) {
             Throwable cause = msg.decoderResult().cause();

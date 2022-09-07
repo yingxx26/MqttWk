@@ -39,6 +39,7 @@ public class DisConnect {
     }
 
     public void processDisConnect(Channel channel, MqttMessage msg) {
+        System.out.println("断开processDisConnect");
         String clientId = (String) channel.attr(AttributeKey.valueOf("clientId")).get();
         SessionStore sessionStore = sessionStoreService.get(clientId);
         if (sessionStore != null && sessionStore.isCleanSession()) {

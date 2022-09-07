@@ -16,17 +16,18 @@ import org.slf4j.LoggerFactory;
  */
 public class PubComp {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(PubComp.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PubComp.class);
 
-	private IDupPubRelMessageStoreService dupPubRelMessageStoreService;
+    private IDupPubRelMessageStoreService dupPubRelMessageStoreService;
 
-	public PubComp(IDupPubRelMessageStoreService dupPubRelMessageStoreService) {
-		this.dupPubRelMessageStoreService = dupPubRelMessageStoreService;
-	}
+    public PubComp(IDupPubRelMessageStoreService dupPubRelMessageStoreService) {
+        this.dupPubRelMessageStoreService = dupPubRelMessageStoreService;
+    }
 
-	public void processPubComp(Channel channel, MqttMessageIdVariableHeader variableHeader) {
-		int messageId = variableHeader.messageId();
-		LOGGER.debug("PUBCOMP - clientId: {}, messageId: {}", (String) channel.attr(AttributeKey.valueOf("clientId")).get(), messageId);
-		dupPubRelMessageStoreService.remove((String) channel.attr(AttributeKey.valueOf("clientId")).get(), variableHeader.messageId());
-	}
+    public void processPubComp(Channel channel, MqttMessageIdVariableHeader variableHeader) {
+        System.out.println("发布结束processPubComp");
+        int messageId = variableHeader.messageId();
+        LOGGER.debug("PUBCOMP - clientId: {}, messageId: {}", (String) channel.attr(AttributeKey.valueOf("clientId")).get(), messageId);
+        dupPubRelMessageStoreService.remove((String) channel.attr(AttributeKey.valueOf("clientId")).get(), variableHeader.messageId());
+    }
 }

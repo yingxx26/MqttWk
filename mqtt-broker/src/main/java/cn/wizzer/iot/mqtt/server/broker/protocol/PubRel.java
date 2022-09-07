@@ -15,14 +15,15 @@ import org.slf4j.LoggerFactory;
  */
 public class PubRel {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(PubRel.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PubRel.class);
 
-	public void processPubRel(Channel channel, MqttMessageIdVariableHeader variableHeader) {
-		MqttMessage pubCompMessage = MqttMessageFactory.newMessage(
-			new MqttFixedHeader(MqttMessageType.PUBCOMP, false, MqttQoS.AT_MOST_ONCE, false, 0),
-			MqttMessageIdVariableHeader.from(variableHeader.messageId()), null);
-		LOGGER.debug("PUBREL - clientId: {}, messageId: {}", (String) channel.attr(AttributeKey.valueOf("clientId")).get(), variableHeader.messageId());
-		channel.writeAndFlush(pubCompMessage);
-	}
+    public void processPubRel(Channel channel, MqttMessageIdVariableHeader variableHeader) {
+		System.out.println("消息释放processPubRel");
+        MqttMessage pubCompMessage = MqttMessageFactory.newMessage(
+                new MqttFixedHeader(MqttMessageType.PUBCOMP, false, MqttQoS.AT_MOST_ONCE, false, 0),
+                MqttMessageIdVariableHeader.from(variableHeader.messageId()), null);
+        LOGGER.debug("PUBREL - clientId: {}, messageId: {}", (String) channel.attr(AttributeKey.valueOf("clientId")).get(), variableHeader.messageId());
+        channel.writeAndFlush(pubCompMessage);
+    }
 
 }

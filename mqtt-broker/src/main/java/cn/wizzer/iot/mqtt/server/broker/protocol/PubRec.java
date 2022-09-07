@@ -18,27 +18,28 @@ import org.slf4j.LoggerFactory;
  */
 public class PubRec {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(PubRel.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PubRel.class);
 
-	private IDupPublishMessageStoreService dupPublishMessageStoreService;
+    private IDupPublishMessageStoreService dupPublishMessageStoreService;
 
-	private IDupPubRelMessageStoreService dupPubRelMessageStoreService;
+    private IDupPubRelMessageStoreService dupPubRelMessageStoreService;
 
-	public PubRec(IDupPublishMessageStoreService dupPublishMessageStoreService, IDupPubRelMessageStoreService dupPubRelMessageStoreService) {
-		this.dupPublishMessageStoreService = dupPublishMessageStoreService;
-		this.dupPubRelMessageStoreService = dupPubRelMessageStoreService;
-	}
+    public PubRec(IDupPublishMessageStoreService dupPublishMessageStoreService, IDupPubRelMessageStoreService dupPubRelMessageStoreService) {
+        this.dupPublishMessageStoreService = dupPublishMessageStoreService;
+        this.dupPubRelMessageStoreService = dupPubRelMessageStoreService;
+    }
 
-	public void processPubRec(Channel channel, MqttMessageIdVariableHeader variableHeader) {
-		MqttMessage pubRelMessage = MqttMessageFactory.newMessage(
-			new MqttFixedHeader(MqttMessageType.PUBREL, false, MqttQoS.AT_MOST_ONCE, false, 0),
-			MqttMessageIdVariableHeader.from(variableHeader.messageId()), null);
-		LOGGER.debug("PUBREC - clientId: {}, messageId: {}", (String) channel.attr(AttributeKey.valueOf("clientId")).get(), variableHeader.messageId());
-		dupPublishMessageStoreService.remove((String) channel.attr(AttributeKey.valueOf("clientId")).get(), variableHeader.messageId());
-		DupPubRelMessageStore dupPubRelMessageStore = new DupPubRelMessageStore().setClientId((String) channel.attr(AttributeKey.valueOf("clientId")).get())
-			.setMessageId(variableHeader.messageId());
-		dupPubRelMessageStoreService.put((String) channel.attr(AttributeKey.valueOf("clientId")).get(), dupPubRelMessageStore);
-		channel.writeAndFlush(pubRelMessage);
-	}
+    public void processPubRec(Channel channel, MqttMessageIdVariableHeader variableHeader) {
+        System.out.println("消息接收processPubRec");
+        MqttMessage pubRelMessage = MqttMessageFactory.newMessage(
+                new MqttFixedHeader(MqttMessageType.PUBREL, false, MqttQoS.AT_MOST_ONCE, false, 0),
+                MqttMessageIdVariableHeader.from(variableHeader.messageId()), null);
+        LOGGER.debug("PUBREC - clientId: {}, messageId: {}", (String) channel.attr(AttributeKey.valueOf("clientId")).get(), variableHeader.messageId());
+        dupPublishMessageStoreService.remove((String) channel.attr(AttributeKey.valueOf("clientId")).get(), variableHeader.messageId());
+        DupPubRelMessageStore dupPubRelMessageStore = new DupPubRelMessageStore().setClientId((String) channel.attr(AttributeKey.valueOf("clientId")).get())
+                .setMessageId(variableHeader.messageId());
+        dupPubRelMessageStoreService.put((String) channel.attr(AttributeKey.valueOf("clientId")).get(), dupPubRelMessageStore);
+        channel.writeAndFlush(pubRelMessage);
+    }
 
 }

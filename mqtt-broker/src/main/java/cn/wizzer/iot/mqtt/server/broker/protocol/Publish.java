@@ -62,6 +62,7 @@ public class Publish {
     }
 
     public void processPublish(Channel channel, MqttPublishMessage msg) {
+        System.out.println("发布processPublish");
         String clientId = (String) channel.attr(AttributeKey.valueOf("clientId")).get();
         // publish 延长session失效时间
         if (sessionStoreService.containsKey(clientId)) {

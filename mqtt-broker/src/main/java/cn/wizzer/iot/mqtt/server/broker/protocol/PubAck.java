@@ -17,18 +17,19 @@ import org.slf4j.LoggerFactory;
  */
 public class PubAck {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(PubAck.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PubAck.class);
 
-	private IDupPublishMessageStoreService dupPublishMessageStoreService;
+    private IDupPublishMessageStoreService dupPublishMessageStoreService;
 
-	public PubAck(IDupPublishMessageStoreService dupPublishMessageStoreService) {
-		this.dupPublishMessageStoreService = dupPublishMessageStoreService;
-	}
+    public PubAck(IDupPublishMessageStoreService dupPublishMessageStoreService) {
+        this.dupPublishMessageStoreService = dupPublishMessageStoreService;
+    }
 
-	public void processPubAck(Channel channel, MqttMessageIdVariableHeader variableHeader) {
-		int messageId = variableHeader.messageId();
-		LOGGER.debug("PUBACK - clientId: {}, messageId: {}", (String) channel.attr(AttributeKey.valueOf("clientId")).get(), messageId);
-		dupPublishMessageStoreService.remove((String) channel.attr(AttributeKey.valueOf("clientId")).get(), messageId);
-	}
+    public void processPubAck(Channel channel, MqttMessageIdVariableHeader variableHeader) {
+        System.out.println("发布确认processPubAck");
+        int messageId = variableHeader.messageId();
+        LOGGER.debug("PUBACK - clientId: {}, messageId: {}", (String) channel.attr(AttributeKey.valueOf("clientId")).get(), messageId);
+        dupPublishMessageStoreService.remove((String) channel.attr(AttributeKey.valueOf("clientId")).get(), messageId);
+    }
 
 }

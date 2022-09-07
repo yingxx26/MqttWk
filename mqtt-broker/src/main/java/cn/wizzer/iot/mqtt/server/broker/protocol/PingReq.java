@@ -36,6 +36,7 @@ public class PingReq {
     }
 
     public void processPingReq(Channel channel, MqttMessage msg) {
+        System.out.println("客户端发送心跳processPingReq");
         String clientId = (String) channel.attr(AttributeKey.valueOf("clientId")).get();
         if (sessionStoreService.containsKey(clientId)) {
             SessionStore sessionStore = sessionStoreService.get(clientId);

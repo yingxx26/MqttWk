@@ -95,6 +95,8 @@ public class MqttSender {
         }
     }
 
+
+    //发送消息
     public void publishMessage(String pubTopic, String message, int qos) {
         if (null != mqttClient && mqttClient.isConnected()) {
             MqttMessage mqttMessage = new MqttMessage();
@@ -105,10 +107,10 @@ public class MqttSender {
                 try {
                     MqttDeliveryToken publish = topic.publish(mqttMessage);
                     if (!publish.isComplete()) {
-                        log.infof("消息发布成功::%s - %s", pubTopic, message);
+                        log.infof("MqttClient消息发布成功::%s - %s", pubTopic, message);
                     }
                 } catch (MqttException e) {
-                    log.errorf("消息发布失败::%s", e.getMessage());
+                    log.errorf("MqttClient消息发布失败::%s", e.getMessage());
                 }
             }
 

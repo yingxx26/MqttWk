@@ -18,25 +18,26 @@ import java.util.List;
  */
 public class UnSubscribe {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(UnSubscribe.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(UnSubscribe.class);
 
-	private ISubscribeStoreService subscribeStoreService;
+    private ISubscribeStoreService subscribeStoreService;
 
-	public UnSubscribe(ISubscribeStoreService subscribeStoreService) {
-		this.subscribeStoreService = subscribeStoreService;
-	}
+    public UnSubscribe(ISubscribeStoreService subscribeStoreService) {
+        this.subscribeStoreService = subscribeStoreService;
+    }
 
-	public void processUnSubscribe(Channel channel, MqttUnsubscribeMessage msg) {
-		List<String> topicFilters = msg.payload().topics();
-		String clinetId = (String) channel.attr(AttributeKey.valueOf("clientId")).get();
-		topicFilters.forEach(topicFilter -> {
-			subscribeStoreService.remove(topicFilter, clinetId);
-			LOGGER.debug("UNSUBSCRIBE - clientId: {}, topicFilter: {}", clinetId, topicFilter);
-		});
-		MqttUnsubAckMessage unsubAckMessage = (MqttUnsubAckMessage) MqttMessageFactory.newMessage(
-			new MqttFixedHeader(MqttMessageType.UNSUBACK, false, MqttQoS.AT_MOST_ONCE, false, 0),
-			MqttMessageIdVariableHeader.from(msg.variableHeader().messageId()), null);
-		channel.writeAndFlush(unsubAckMessage);
-	}
+    public void processUnSubscribe(Channel channel, MqttUnsubscribeMessage msg) {
+        System.out.println("取消订阅processUnSubscribe");
+        List<String> topicFilters = msg.payload().topics();
+        String clinetId = (String) channel.attr(AttributeKey.valueOf("clientId")).get();
+        topicFilters.forEach(topicFilter -> {
+            subscribeStoreService.remove(topicFilter, clinetId);
+            LOGGER.debug("UNSUBSCRIBE - clientId: {}, topicFilter: {}", clinetId, topicFilter);
+        });
+        MqttUnsubAckMessage unsubAckMessage = (MqttUnsubAckMessage) MqttMessageFactory.newMessage(
+                new MqttFixedHeader(MqttMessageType.UNSUBACK, false, MqttQoS.AT_MOST_ONCE, false, 0),
+                MqttMessageIdVariableHeader.from(msg.variableHeader().messageId()), null);
+        channel.writeAndFlush(unsubAckMessage);
+    }
 
 }
