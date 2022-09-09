@@ -31,14 +31,26 @@ public class Publish {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Publish.class);
 
+    /**
+     * 会话存储服务接口
+     */
     private ISessionStoreService sessionStoreService;
 
+    /**
+     * 订阅存储服务接口
+     */
     private ISubscribeStoreService subscribeStoreService;
 
     private IMessageIdService messageIdService;
 
+    /**
+     * 消息存储服务接口
+     */
     private IRetainMessageStoreService retainMessageStoreService;
 
+    /**
+     * PUBLISH重发消息存储服务接口, 当QoS=1和QoS=2时存在该重发机制
+     */
     private IDupPublishMessageStoreService dupPublishMessageStoreService;
 
     private InternalCommunication internalCommunication;
@@ -62,7 +74,7 @@ public class Publish {
     }
 
     public void processPublish(Channel channel, MqttPublishMessage msg) {
-        System.out.println("发布processPublish");
+        System.out.println("发布processPublish ： topic="+ msg.variableHeader().topicName()+";  mesg="+ msg.toString());
         String clientId = (String) channel.attr(AttributeKey.valueOf("clientId")).get();
         // publish 延长session失效时间
         if (sessionStoreService.containsKey(clientId)) {

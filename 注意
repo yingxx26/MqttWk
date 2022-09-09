@@ -1,7 +1,8 @@
 启动MainLauncher
 
+启动clientMainLauncher
 
-打开工具目录  E:\Programs\mqtt-spy
-java -jar E:\Programs\mqtt-spy\mqtt-spy-1.0.0.jar
 
-mqtt-spy使用教程：https://blog.csdn.net/sinat_28771747/article/details/99057034
+遗嘱信息  ：意外断开
+保留信息  ：mqtt服务端存储的信息
+

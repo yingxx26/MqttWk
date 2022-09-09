@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 @IocBean
 public class SubscribeNotWildcardCache {
-    private final static String CACHE_PRE = "mqttwk:subnotwildcard:";
+    private final static String CACHE_PRE = "mqttwk:topic:";
     private final static String CACHE_CLIENT_PRE = "mqttwk:client:";
     @Inject
     private RedisService redisService;

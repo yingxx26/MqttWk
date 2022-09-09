@@ -1,0 +1,688 @@
+[INFO ] 08:44:01.162 org.nutz.boot.banner.SimpleBannerPrinter - 
+:: MqttWk by https://wizzer.cn
+
+[DEBUG] 08:44:01.187 org.nutz.boot.NbApp - using org.nutz.boot.config.impl.YamlConfigureLoader as ConfigureLoader
+[DEBUG] 08:44:01.403 org.nutz.resource.Scans - Locations count=106 time use 196ms
+[DEBUG] 08:44:01.427 org.nutz.resource.Scans - Found 1 resource by src( custom/ ) , regex( ^.+[.]properties$ )
+[DEBUG] 08:44:01.428 org.nutz.ioc.impl.PropertiesProxy - load properties from jar:file:/D:/Repository/org/nutz/nutzboot-core/2.4.3-SNAPSHOT/nutzboot-core-2.4.3-20220720.060913-39.jar!/custom/emtry.properties
+[DEBUG] 08:44:01.444 org.nutz.boot.config.impl.YamlConfigureLoader - load D:\Project_yxx\MqttWk\mqtt-broker\target\classes\application.yaml
+[DEBUG] 08:44:01.734 org.nutz.resource.Scans - Found 1 resource by src( ioc/ ) , regex( ^(.+[.])(js|json)$ )
+[DEBUG] 08:44:01.734 org.nutz.ioc.loader.json.JsonLoader - loading [emtry.json]
+[DEBUG] 08:44:01.735 org.nutz.ioc.loader.json.JsonLoader - Loaded 0 bean define from path=[ioc/] --> []
+[DEBUG] 08:44:01.852 org.nutz.castor.Castors - Using 107 castor for Castors
+[DEBUG] 08:44:01.883 org.nutz.ioc.aop.SimpleAopMaker - Load AopConfigure for anno=org.nutz.aop.interceptor.async.Async by type=org.nutz.aop.interceptor.async.AsyncAopIocLoader
+[INFO ] 08:44:01.908 org.nutz.ioc.loader.annotation.AnnotationIocLoader -  > scan 'cn.wizzer.iot'
+[DEBUG] 08:44:01.975 org.nutz.resource.Scans - Found 55 resource by src( cn/wizzer/iot/ ) , regex( ^.+[.]class$ )
+[INFO ] 08:44:02.097 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'redisCluster                            ' - cn.wizzer.iot.mqtt.server.broker.cluster.RedisCluster
+[INFO ] 08:44:02.108 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'brokerProperties                        ' - cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties
+[INFO ] 08:44:02.112 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'brokerHandler                           ' - cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler
+[INFO ] 08:44:02.123 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'internalCommunication                   ' - cn.wizzer.iot.mqtt.server.broker.internal.InternalCommunication
+[INFO ] 08:44:02.125 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'internalSendServer                      ' - cn.wizzer.iot.mqtt.server.broker.internal.InternalSendServer
+[INFO ] 08:44:02.128 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'mainLauncher                            ' - cn.wizzer.iot.mqtt.server.broker.MainLauncher
+[INFO ] 08:44:02.148 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'protocolProcess                         ' - cn.wizzer.iot.mqtt.server.broker.protocol.ProtocolProcess
+[INFO ] 08:44:02.151 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'brokerServer                            ' - cn.wizzer.iot.mqtt.server.broker.server.BrokerServer
+[DEBUG] 08:44:02.160 org.nutz.ioc.loader.annotation.AnnotationIocLoader - Found @IocBean method : BrokerServer.getChannels(...) define as name=channelGroup
+[DEBUG] 08:44:02.163 org.nutz.ioc.loader.annotation.AnnotationIocLoader - Found @IocBean method : BrokerServer.getChannelIdMap(...) define as name=channelIdMap
+[INFO ] 08:44:02.164 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'kafkaService                            ' - cn.wizzer.iot.mqtt.server.broker.service.KafkaService
+[INFO ] 08:44:02.171 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'webApiController                        ' - cn.wizzer.iot.mqtt.server.broker.webapi.WebApiController
+[INFO ] 08:44:02.185 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'dupPublishMessageCache                  ' - cn.wizzer.iot.mqtt.server.store.cache.DupPublishMessageCache
+[INFO ] 08:44:02.187 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'dupPubRelMessageCache                   ' - cn.wizzer.iot.mqtt.server.store.cache.DupPubRelMessageCache
+[INFO ] 08:44:02.189 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'retainMessageCache                      ' - cn.wizzer.iot.mqtt.server.store.cache.RetainMessageCache
+[INFO ] 08:44:02.193 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'subscribeNotWildcardCache               ' - cn.wizzer.iot.mqtt.server.store.cache.SubscribeNotWildcardCache
+[INFO ] 08:44:02.245 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'subscribeWildcardCache                  ' - cn.wizzer.iot.mqtt.server.store.cache.SubscribeWildcardCache
+[INFO ] 08:44:02.257 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'dupPublishMessageStoreService           ' - cn.wizzer.iot.mqtt.server.store.message.DupPublishMessageStoreService
+[INFO ] 08:44:02.258 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'dupPubRelMessageStoreService            ' - cn.wizzer.iot.mqtt.server.store.message.DupPubRelMessageStoreService
+[INFO ] 08:44:02.260 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'messageIdService                        ' - cn.wizzer.iot.mqtt.server.store.message.MessageIdService
+[INFO ] 08:44:02.262 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'retainMessageStoreService               ' - cn.wizzer.iot.mqtt.server.store.message.RetainMessageStoreService
+[INFO ] 08:44:02.264 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'sessionStoreService                     ' - cn.wizzer.iot.mqtt.server.store.session.SessionStoreService
+[INFO ] 08:44:02.278 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'storeStarter                            ' - cn.wizzer.iot.mqtt.server.store.starter.StoreStarter
+[DEBUG] 08:44:02.280 org.nutz.ioc.loader.annotation.AnnotationIocLoader - Found @IocBean method : StoreStarter.kafkaProducer(...) define as name=kafkaProducer
+[INFO ] 08:44:02.281 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'subscribeStoreService                   ' - cn.wizzer.iot.mqtt.server.store.subscribe.SubscribeStoreService
+[INFO ] 08:44:02.292 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'authService                             ' - cn.wizzer.iot.mqtt.server.auth.service.AuthService
+[INFO ] 08:44:02.294 org.nutz.ioc.loader.annotation.AnnotationIocLoader -  > scan 'org.nutz.boot.starter'
+[DEBUG] 08:44:02.297 org.nutz.resource.Scans - Found 18 resource by src( org/nutz/boot/starter/ ) , regex( ^.+[.]class$ )
+[INFO ] 08:44:02.324 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'nutFilterStarter                        ' - org.nutz.boot.starter.nutz.mvc.NutFilterStarter
+[DEBUG] 08:44:02.330 org.nutz.ioc.loader.annotation.AnnotationIocLoader - Found @IocBean method : NutFilterStarter.createNutFilter(...) define as name=nutFilter
+[INFO ] 08:44:02.330 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'whaleFilterStarter                      ' - org.nutz.boot.starter.nutz.mvc.WhaleFilterStarter
+[DEBUG] 08:44:02.333 org.nutz.ioc.loader.annotation.AnnotationIocLoader - Found @IocBean method : WhaleFilterStarter.createNutFilter(...) define as name=whaleFilter
+[INFO ] 08:44:02.340 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'jettyStarter                            ' - org.nutz.boot.starter.jetty.JettyStarter
+[DEBUG] 08:44:02.386 org.nutz.ioc.loader.annotation.AnnotationIocLoader - Found @IocBean method : JettyStarter.getJettyServer(...) define as name=jettyServer
+[INFO ] 08:44:02.386 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'nbServletContextListener                ' - org.nutz.boot.starter.servlet3.NbServletContextListener
+[DEBUG] 08:44:02.391 org.nutz.boot.NbApp - Found file:/D:/Project_yxx/MqttWk/mqtt-store/target/classes/META-INF/nutz/org.nutz.boot.starter.NbStarter
+[DEBUG] 08:44:02.404 org.nutz.resource.Scans - Found 1 resource by src( cn/wizzer/iot/mqtt/server/store/starter/ ) , regex( ^.+[.]class$ )
+[INFO ] 08:44:02.405 org.nutz.ioc.loader.annotation.AnnotationIocLoader -    > add 'storeStarter                            ' - cn.wizzer.iot.mqtt.server.store.starter.StoreStarter
+[DEBUG] 08:44:02.406 org.nutz.ioc.loader.annotation.AnnotationIocLoader - Found @IocBean method : StoreStarter.kafkaProducer(...) define as name=kafkaProducer
+[DEBUG] 08:44:02.407 org.nutz.boot.NbApp - Found jar:file:/D:/Repository/org/nutz/nutzboot-starter-redis/2.4.3-SNAPSHOT/nutzboot-starter-redis-2.4.3-20220720.061040-38.jar!/META-INF/nutz/org.nutz.boot.starter.NbStarter
+[DEBUG] 08:44:02.408 org.nutz.boot.NbApp - Found jar:file:/D:/Repository/org/nutz/nutzboot-starter-nutz-mvc/2.4.3-SNAPSHOT/nutzboot-starter-nutz-mvc-2.4.3-20220720.061216-38.jar!/META-INF/nutz/org.nutz.boot.starter.NbStarter
+[DEBUG] 08:44:02.410 org.nutz.boot.NbApp - Found jar:file:/D:/Repository/org/nutz/nutzboot-starter-jetty/2.4.3-SNAPSHOT/nutzboot-starter-jetty-2.4.3-20220720.060951-38.jar!/META-INF/nutz/org.nutz.boot.starter.NbStarter
+[DEBUG] 08:44:02.460 org.nutz.resource.Scans - Found 26 resource by src( cn/wizzer/iot/mqtt/server/broker/ ) , regex( ^.+[.]class$ )
+[INFO ] 08:44:02.515 org.nutz.boot.NbApp - Configure Manual:
+|id  |key                                     |required  |Possible Values     |Default   |Description         |                                starters|
+|----|----------------------------------------|----------|--------------------|----------|--------------------|----------------------------------------|
+|0   |jetty.contextPath                       |no        |                    |/         |上下文路径               |org.nutz.boot.starter.jetty.JettyStarter|
+|1   |jetty.extports                          |no        |                    |          |配置多个端口监听            |org.nutz.boot.starter.jetty.JettyStarter|
+|2   |jetty.gzip.enable                       |no        |                    |false     |是否启用gzip            |org.nutz.boot.starter.jetty.JettyStarter|
+|3   |jetty.gzip.level                        |no        |                    |-1        |gzip压缩级别            |org.nutz.boot.starter.jetty.JettyStarter|
+|4   |jetty.gzip.minContentSize               |no        |                    |512       |gzip压缩最小触发大小        |org.nutz.boot.starter.jetty.JettyStarter|
+|5   |jetty.host                              |no        |                    |0.0.0.0   |监听的ip地址             |org.nutz.boot.starter.jetty.JettyStarter|
+|6   |jetty.http.idleTimeout                  |no        |                    |300000    |空闲时间,单位毫秒           |org.nutz.boot.starter.jetty.JettyStarter|
+|7   |jetty.httpConfig.blockingTimeout        |no        |                    |-1        |阻塞超时                |org.nutz.boot.starter.jetty.JettyStarter|
+|8   |jetty.httpConfig.headerCacheSize        |no        |                    |8192      |头部缓冲区大小             |org.nutz.boot.starter.jetty.JettyStarter|
+|9   |jetty.httpConfig.maxErrorDispatches     |no        |                    |10        |最大错误重定向次数           |org.nutz.boot.starter.jetty.JettyStarter|
+|10  |jetty.httpConfig.outputAggregationSize  |no        |                    |8192      |输出聚合大小              |org.nutz.boot.starter.jetty.JettyStarter|
+|11  |jetty.httpConfig.outputBufferSize       |no        |                    |32768     |输出缓冲区大小             |org.nutz.boot.starter.jetty.JettyStarter|
+|12  |jetty.httpConfig.persistentConnectionsEnabled|no        |                    |true      |是否启用持久化连接           |org.nutz.boot.starter.jetty.JettyStarter|
+|13  |jetty.httpConfig.requestHeaderSize      |no        |                    |8192      |请求的头部最大值            |org.nutz.boot.starter.jetty.JettyStarter|
+|14  |jetty.httpConfig.responseHeaderSize     |no        |                    |8192      |响应的头部最大值            |org.nutz.boot.starter.jetty.JettyStarter|
+|15  |jetty.httpConfig.securePort             |no        |                    |          |安全协议的端口,例如8443      |org.nutz.boot.starter.jetty.JettyStarter|
+|16  |jetty.httpConfig.secureScheme           |no        |                    |          |安全协议,例如https        |org.nutz.boot.starter.jetty.JettyStarter|
+|17  |jetty.httpConfig.sendDateHeader         |no        |                    |true      |是否发送日期信息            |org.nutz.boot.starter.jetty.JettyStarter|
+|18  |jetty.httpConfig.sendServerVersion      |no        |                    |true      |是否发送jetty版本号        |org.nutz.boot.starter.jetty.JettyStarter|
+|19  |jetty.https.keystore.password           |no        |                    |          |Https的KeyStore的密码   |org.nutz.boot.starter.jetty.JettyStarter|
+|20  |jetty.https.keystore.path               |no        |                    |          |Https的KeyStore路径    |org.nutz.boot.starter.jetty.JettyStarter|
+|21  |jetty.https.port                        |no        |                    |          |Https端口号            |org.nutz.boot.starter.jetty.JettyStarter|
+|22  |jetty.maxFormContentSize                |no        |                    |1gb       |表单最大尺寸              |org.nutz.boot.starter.jetty.JettyStarter|
+|23  |jetty.maxFormKeys                       |no        |                    |1000      |表单最大key数量           |org.nutz.boot.starter.jetty.JettyStarter|
+|24  |jetty.page.404                          |no        |                    |          |自定义404页面,同理,其他状态码也是支持的|org.nutz.boot.starter.jetty.JettyStarter|
+|25  |jetty.page.java.lang.Throwable          |no        |                    |          |自定义java.lang.Throwable页面,同理,其他异常也支持|org.nutz.boot.starter.jetty.JettyStarter|
+|26  |jetty.port                              |no        |                    |8080      |监听的端口               |org.nutz.boot.starter.jetty.JettyStarter|
+|27  |jetty.session.cookie.domain             |no        |                    |          |设置cookie的domain     |org.nutz.boot.starter.jetty.JettyStarter|
+|28  |jetty.session.cookie.httponly           |no        |                    |false     |cookie是否设置HttpOnly  |org.nutz.boot.starter.jetty.JettyStarter|
+|29  |jetty.session.cookie.name               |no        |                    |          |设置cookie的name       |org.nutz.boot.starter.jetty.JettyStarter|
+|30  |jetty.session.cookie.path               |no        |                    |          |设置cookie的path       |org.nutz.boot.starter.jetty.JettyStarter|
+|31  |jetty.session.cookie.secure             |no        |                    |false     |cookie是否设置Secure    |org.nutz.boot.starter.jetty.JettyStarter|
+|32  |jetty.session.file.storeDir             |no        |                    |./session |session持久化,file所用的目录|org.nutz.boot.starter.jetty.JettyStarter|
+|33  |jetty.session.ioc.datastore             |no        |                    |jettySessionDataStore|session持久化,SessionDataStore对应的ioc名称|org.nutz.boot.starter.jetty.JettyStarter|
+|34  |jetty.session.jdbc.datasource.iocname   |no        |                    |dataSource|session持久化,jdbc所用数据库源的ioc名称|org.nutz.boot.starter.jetty.JettyStarter|
+|35  |jetty.session.store.enable              |no        |                    |false     |是否启用session持久化      |org.nutz.boot.starter.jetty.JettyStarter|
+|36  |jetty.session.store.type                |no        |jdbc,file,ioc,redis |jdbc      |session持久化类型        |org.nutz.boot.starter.jetty.JettyStarter|
+|37  |jetty.sessionScavengeInterval.seconds   |no        |                    |600       |扫描session过期的间隔      |org.nutz.boot.starter.jetty.JettyStarter|
+|38  |jetty.staticPath                        |no        |                    |          |额外的静态文件路径           |org.nutz.boot.starter.jetty.JettyStarter|
+|39  |jetty.staticPathLocal                   |no        |                    |          |静态文件所在的本地路径         |org.nutz.boot.starter.jetty.JettyStarter|
+|40  |jetty.tempdir                           |no        |                    |./temp    |设置jetty的临时目录        |org.nutz.boot.starter.jetty.JettyStarter|
+|41  |jetty.threadpool.idleTimeout            |no        |                    |60000     |线程池idleTimeout，单位毫秒 |org.nutz.boot.starter.jetty.JettyStarter|
+|42  |jetty.threadpool.maxThreads             |no        |                    |500       |线程池最大线程数maxThreads  |org.nutz.boot.starter.jetty.JettyStarter|
+|43  |jetty.threadpool.minThreads             |no        |                    |200       |线程池最小线程数minThreads  |org.nutz.boot.starter.jetty.JettyStarter|
+|44  |jetty.welcome_files                     |no        |                    |index.html,index.htm,index.do|WelcomeFile列表       |org.nutz.boot.starter.jetty.JettyStarter|
+|45  |mqttwk.broker.bossGroup-nThreads        |no        |                    |4         |bossGroup线程数        |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|46  |mqttwk.broker.cluster-on                |no        |                    |false     |是否开启集群模式, 默认false   |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|47  |mqttwk.broker.host                      |no        |                    |127.0.0.1 |服务启动的IP             |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|48  |mqttwk.broker.id                        |yes       |                    |mqttwk    |实例名称                |cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|49  |mqttwk.broker.kafka.acks                |no        |                    |all       |all:必须等待回令 -1:不等待   |cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|50  |mqttwk.broker.kafka.batch.size          |no        |                    |16384     |批量提交大小              |cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|51  |mqttwk.broker.kafka.bootstrap.servers   |yes       |                    |127.0.0.1:9092|kafka地址 127.0.0.1:9092,127.0.0.1:9093|cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|52  |mqttwk.broker.kafka.broker-enabled      |yes       |                    |false     |是否启用kafka消息转发       |cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|53  |mqttwk.broker.kafka.buffer.memory       |no        |                    |67108864  |缓存大小(Bit) 默认:64MB   |cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|54  |mqttwk.broker.kafka.key.serializer      |no        |                    |org.apache.kafka.common.serialization.StringSerializer|key序列化方法            |cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|55  |mqttwk.broker.kafka.linger.ms           |no        |                    |1         |提交延迟等待时间(等待时间内可以追加提交)|cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|56  |mqttwk.broker.kafka.partitioner.class   |no        |                    |cn.wizzer.iot.mqtt.server.store.kafka.SimplePartitioner|分发策略                |cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|57  |mqttwk.broker.kafka.producer.topic      |no        |                    |mqtt_publish|kafka转发topic        |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|58  |mqttwk.broker.kafka.retries             |no        |                    |0         |重试次数                |cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|59  |mqttwk.broker.kafka.value.serializer    |no        |                    |org.apache.kafka.common.serialization.StringSerializer|value序列化方法          |cn.wizzer.iot.mqtt.server.store.starter.StoreStarter|
+|60  |mqttwk.broker.keep-alive                |no        |                    |60        |心跳时间(秒), 默认60秒, 该值可被客户端连接时相应配置覆盖|cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|61  |mqttwk.broker.mqtt-password-must        |no        |                    |true      |Connect消息必须通过用户名密码验证, 默认true|cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|62  |mqttwk.broker.port                      |no        |                    |8885      |端口号, 默认8885端口       |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|63  |mqttwk.broker.so-backlog                |no        |                    |511       |Sokcet参数, 存放已完成三次握手请求的队列最大长度, 默认511长度|cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|64  |mqttwk.broker.so-keep-alive             |no        |                    |true      |是否开启心跳保活机制, 默认开启    |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|65  |mqttwk.broker.ssl-enabled               |no        |                    |true      |SSL是否启用             |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|66  |mqttwk.broker.ssl-password              |no        |                    |          |SSL密钥文件密码           |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|67  |mqttwk.broker.use-epoll                 |no        |                    |false     |是否开启Epoll模式, 默认关闭   |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|68  |mqttwk.broker.websocket-enabled         |no        |                    |false     |WebSocket 是否启用      |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|69  |mqttwk.broker.websocket-path            |no        |                    |/mqtt     |WebSocket 访问路径, 默认 /mqtt|cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|70  |mqttwk.broker.websocket-port            |no        |                    |9995      |WebSocket 端口号, 默认9995端口|cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|71  |mqttwk.broker.workerGroup-nThreads      |no        |                    |20        |bossGroup线程数        |cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties|
+|72  |nutz.mvc.exclusions                     |no        |                    |          |排除指定请求路径的正则表达式      |org.nutz.boot.starter.nutz.mvc.NutFilterStarter|
+|73  |nutz.mvc.ignore                         |no        |                    |          |过滤指定请求路径的正则表达式      |org.nutz.boot.starter.nutz.mvc.NutFilterStarter|
+|74  |nutz.mvc.whale.enc.input                |no        |                    |UTF-8     |在其他Filter之前设置input编码|org.nutz.boot.starter.nutz.mvc.WhaleFilterStarter|
+|75  |nutz.mvc.whale.enc.output               |no        |                    |UTF-8     |在其他Filter之前设置output编码|org.nutz.boot.starter.nutz.mvc.WhaleFilterStarter|
+|76  |nutz.mvc.whale.http.hidden_method_param |no        |                    |          |隐形http方法参数转换所对应的参数名 |org.nutz.boot.starter.nutz.mvc.WhaleFilterStarter|
+|77  |nutz.mvc.whale.http.method_override     |no        |                    |false     |是否允许使用X-HTTP-Method-Override|org.nutz.boot.starter.nutz.mvc.WhaleFilterStarter|
+|78  |nutz.mvc.whale.upload.enable            |no        |                    |false     |是否启用隐形Upload支持      |org.nutz.boot.starter.nutz.mvc.WhaleFilterStarter|
+|79  |redis.database                          |no        |                    |0         |redis数据库序号          |org.nutz.boot.starter.redis.JedisStarter|
+|80  |redis.host                              |no        |                    |127.0.0.1 |redis服务器ip或域名       |org.nutz.boot.starter.redis.JedisStarter|
+|81  |redis.max_redir                         |no        |                    |10        |redis集群最大重定向次数      |org.nutz.boot.starter.redis.JedisStarter|
+|82  |redis.nodes                             |no        |                    |          |redis集群节点列表         |org.nutz.boot.starter.redis.JedisStarter|
+|83  |redis.password                          |no        |                    |          |redis密码             |org.nutz.boot.starter.redis.JedisStarter|
+|84  |redis.port                              |no        |                    |6379      |redis服务器端口          |org.nutz.boot.starter.redis.JedisStarter|
+|85  |redis.soTimeout                         |no        |                    |0         |redis写超时            |org.nutz.boot.starter.redis.JedisStarter|
+|86  |redis.timeout                           |no        |                    |2000      |redis读写超时           |org.nutz.boot.starter.redis.JedisStarter|
+|87  |web.filter.chain.path                   |no        |                    |          |指定Chain文件路径         |org.nutz.boot.starter.nutz.mvc.NutFilterStarter|
+|88  |web.filter.order.nutz                   |no        |                    |          |指定NutFilter执行顺序     |org.nutz.boot.starter.nutz.mvc.NutFilterStarter|
+|89  |web.session.timeout                     |no        |                    |30        |Session空闲时间,单位分钟    |org.nutz.boot.starter.jetty.JettyStarter|
+[INFO ] 08:44:02.540 org.nutz.ioc.impl.NutIoc - ... NutIoc init complete
+[DEBUG] 08:44:02.541 org.nutz.ioc.impl.ScopeContext - Save object 'appContext' to [app] 
+[DEBUG] 08:44:02.542 org.nutz.ioc.impl.ScopeContext - Save object 'conf' to [app] 
+[DEBUG] 08:44:02.542 org.nutz.ioc.impl.ScopeContext - Save object 'nbApp' to [app] 
+[DEBUG] 08:44:02.545 org.nutz.ioc.impl.ScopeContext - Save object 'counterService' to [app] 
+[DEBUG] 08:44:02.560 org.nutz.resource.Scans - Found 1 resource by src( org/nutz/integration/jedis/jedis.js ) , regex( ^(.+[.])(js|json)$ )
+[DEBUG] 08:44:02.560 org.nutz.ioc.loader.json.JsonLoader - loading [org/nutz/integration/jedis/jedis.js]
+[DEBUG] 08:44:02.562 org.nutz.ioc.loader.json.JsonLoader - Loaded 9 bean define from path=[org/nutz/integration/jedis/jedis.js] --> [redisService, jedisCluster, jedisClusterNodes, jedisClusterWrapper, pubSubService, jedisPoolConfig, jedisPool, jedisAgent, redis]
+[DEBUG] 08:44:02.564 org.nutz.ioc.impl.NutIoc - Get 'storeStarter'<class cn.wizzer.iot.mqtt.server.store.starter.StoreStarter>
+[DEBUG] 08:44:02.564 org.nutz.ioc.impl.NutIoc - Get '$aop_async'<interface org.nutz.ioc.aop.config.AopConfigration>
+[DEBUG] 08:44:02.566 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=$aop_async
+[DEBUG] 08:44:02.569 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject($aop_async) in AsyncAopIocLoader@713656449
+[DEBUG] 08:44:02.569 org.nutz.ioc.impl.NutIoc - 	 >> Make...'$aop_async'<interface org.nutz.ioc.aop.config.AopConfigration>
+[DEBUG] 08:44:02.607 org.nutz.ioc.impl.ScopeContext - Save object '$aop_async' to [app] 
+[DEBUG] 08:44:02.628 org.nutz.ioc.aop.SimpleAopMaker - Load AopConfigure for anno=org.nutz.ioc.aop.Aop by type=org.nutz.ioc.aop.config.impl.AnnotationAopConfigration
+[DEBUG] 08:44:02.629 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=storeStarter
+[DEBUG] 08:44:02.629 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(storeStarter) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:44:02.629 org.nutz.ioc.impl.NutIoc - 	 >> Make...'storeStarter'<class cn.wizzer.iot.mqtt.server.store.starter.StoreStarter>
+[DEBUG] 08:44:02.629 org.nutz.ioc.impl.ScopeContext - Save object 'storeStarter' to [app] 
+[DEBUG] 08:44:02.630 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.store.starter.StoreStarter without AOP
+[DEBUG] 08:44:02.658 org.nutz.ioc.impl.NutIoc - Get 'conf'<class org.nutz.ioc.impl.PropertiesProxy>
+[DEBUG] 08:44:02.660 org.nutz.ioc.impl.NutIoc - Get 'nutFilterStarter'<class org.nutz.boot.starter.nutz.mvc.NutFilterStarter>
+[DEBUG] 08:44:02.660 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=nutFilterStarter
+[DEBUG] 08:44:02.660 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(nutFilterStarter) in AnnotationIocLoader(packages=[org.nutz.boot.starter])
+[DEBUG] 08:44:02.661 org.nutz.ioc.impl.NutIoc - 	 >> Make...'nutFilterStarter'<class org.nutz.boot.starter.nutz.mvc.NutFilterStarter>
+[DEBUG] 08:44:02.661 org.nutz.ioc.impl.ScopeContext - Save object 'nutFilterStarter' to [app] 
+[DEBUG] 08:44:02.661 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.nutz.boot.starter.nutz.mvc.NutFilterStarter without AOP
+[DEBUG] 08:44:02.681 org.nutz.ioc.impl.NutIoc - Get 'conf'<class org.nutz.ioc.impl.PropertiesProxy>
+[DEBUG] 08:44:02.682 org.nutz.ioc.impl.NutIoc - Get 'appContext'<class org.nutz.boot.AppContext>
+[DEBUG] 08:44:02.684 org.nutz.ioc.impl.NutIoc - Get 'whaleFilterStarter'<class org.nutz.boot.starter.nutz.mvc.WhaleFilterStarter>
+[DEBUG] 08:44:02.688 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=whaleFilterStarter
+[DEBUG] 08:44:02.689 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(whaleFilterStarter) in AnnotationIocLoader(packages=[org.nutz.boot.starter])
+[DEBUG] 08:44:02.691 org.nutz.ioc.impl.NutIoc - 	 >> Make...'whaleFilterStarter'<class org.nutz.boot.starter.nutz.mvc.WhaleFilterStarter>
+[DEBUG] 08:44:02.691 org.nutz.ioc.impl.ScopeContext - Save object 'whaleFilterStarter' to [app] 
+[DEBUG] 08:44:02.692 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.nutz.boot.starter.nutz.mvc.WhaleFilterStarter without AOP
+[DEBUG] 08:44:02.733 org.nutz.ioc.impl.NutIoc - Get 'conf'<class org.nutz.ioc.impl.PropertiesProxy>
+[DEBUG] 08:44:02.733 org.nutz.ioc.impl.NutIoc - Get 'jettyStarter'<class org.nutz.boot.starter.jetty.JettyStarter>
+[DEBUG] 08:44:02.734 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=jettyStarter
+[DEBUG] 08:44:02.734 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(jettyStarter) in AnnotationIocLoader(packages=[org.nutz.boot.starter])
+[DEBUG] 08:44:02.734 org.nutz.ioc.impl.NutIoc - 	 >> Make...'jettyStarter'<class org.nutz.boot.starter.jetty.JettyStarter>
+[DEBUG] 08:44:02.735 org.nutz.ioc.impl.ScopeContext - Save object 'jettyStarter' to [app] 
+[DEBUG] 08:44:02.736 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.nutz.boot.starter.jetty.JettyStarter without AOP
+[DEBUG] 08:44:02.816 org.nutz.ioc.impl.NutIoc - Get 'conf'<class org.nutz.ioc.impl.PropertiesProxy>
+[DEBUG] 08:44:02.821 org.nutz.ioc.impl.NutIoc - Get 'appContext'<class org.nutz.boot.AppContext>
+[INFO ] 08:44:02.876 org.eclipse.jetty.util.log - Logging initialized @5608ms to org.eclipse.jetty.util.log.Slf4jLog
+[DEBUG] 08:44:03.349 org.nutz.ioc.impl.NutIoc - Get 'nbServletContextListener'<class org.nutz.boot.starter.servlet3.NbServletContextListener>
+[DEBUG] 08:44:03.349 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=nbServletContextListener
+[DEBUG] 08:44:03.351 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(nbServletContextListener) in AnnotationIocLoader(packages=[org.nutz.boot.starter])
+[DEBUG] 08:44:03.352 org.nutz.ioc.impl.NutIoc - 	 >> Make...'nbServletContextListener'<class org.nutz.boot.starter.servlet3.NbServletContextListener>
+[DEBUG] 08:44:03.352 org.nutz.ioc.impl.ScopeContext - Save object 'nbServletContextListener' to [app] 
+[DEBUG] 08:44:03.353 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.nutz.boot.starter.servlet3.NbServletContextListener without AOP
+[DEBUG] 08:44:03.359 org.nutz.ioc.impl.NutIoc - Get 'appContext'<class org.nutz.boot.AppContext>
+[DEBUG] 08:44:03.584 org.nutz.resource.Scans - Found 55 resource by src( cn/wizzer/iot/ ) , regex( ^.+[.]class$ )
+[DEBUG] 08:44:03.587 org.nutz.ioc.impl.NutIoc - Get 'brokerServer'<interface org.nutz.boot.starter.ServerFace>
+[DEBUG] 08:44:03.588 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=brokerServer
+[DEBUG] 08:44:03.588 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(brokerServer) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:44:03.589 org.nutz.ioc.impl.NutIoc - 	 >> Make...'brokerServer'<interface org.nutz.boot.starter.ServerFace>
+[DEBUG] 08:44:03.589 org.nutz.ioc.impl.ScopeContext - Save object 'brokerServer' to [app] 
+[DEBUG] 08:44:03.589 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.broker.server.BrokerServer without AOP
+[DEBUG] 08:44:03.599 org.nutz.ioc.impl.NutIoc - Get 'brokerProperties'<class cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties>
+[DEBUG] 08:44:03.599 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=brokerProperties
+[DEBUG] 08:44:03.600 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(brokerProperties) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:44:03.600 org.nutz.ioc.impl.NutIoc - 	 >> Make...'brokerProperties'<class cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties>
+[DEBUG] 08:44:03.601 org.nutz.ioc.impl.ScopeContext - Save object 'brokerProperties' to [app] 
+[DEBUG] 08:44:03.601 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties without AOP
+[DEBUG] 08:44:03.645 org.nutz.ioc.impl.NutIoc - Get 'conf'<class org.nutz.ioc.impl.PropertiesProxy>
+[DEBUG] 08:44:03.645 org.nutz.ioc.impl.NutIoc - Get 'jettyStarter'<interface org.nutz.boot.starter.ServerFace>
+[INFO ] 08:44:03.646 cn.wizzer.iot.mqtt.server.broker.server.BrokerServer - Initializing [mqttwk] MQTT Broker ...
+[DEBUG] 08:44:03.703 io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+[DEBUG] 08:44:03.735 io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[DEBUG] 08:44:03.735 io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[DEBUG] 08:44:03.777 io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+[DEBUG] 08:44:03.778 io.netty.util.internal.PlatformDependent0 - Java version: 8
+[DEBUG] 08:44:03.781 io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+[DEBUG] 08:44:03.784 io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+[DEBUG] 08:44:03.785 io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+[DEBUG] 08:44:03.787 io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+[DEBUG] 08:44:03.788 io.netty.util.internal.PlatformDependent0 - direct buffer constructor: available
+[DEBUG] 08:44:03.790 io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+[DEBUG] 08:44:03.790 io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+[DEBUG] 08:44:03.790 io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+[DEBUG] 08:44:03.791 io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+[DEBUG] 08:44:03.792 io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\yxx\AppData\Local\Temp (java.io.tmpdir)
+[DEBUG] 08:44:03.793 io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[DEBUG] 08:44:03.794 io.netty.util.internal.PlatformDependent - Platform: Windows
+[DEBUG] 08:44:03.799 io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 3767533568 bytes
+[DEBUG] 08:44:03.800 io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[DEBUG] 08:44:03.806 io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+[DEBUG] 08:44:03.807 io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+[DEBUG] 08:44:03.828 io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 8
+[DEBUG] 08:44:03.854 io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+[DEBUG] 08:44:03.855 io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+[DEBUG] 08:44:03.877 io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+[DEBUG] 08:44:04.426 io.netty.channel.DefaultChannelId - -Dio.netty.processId: 1088 (auto-detected)
+[DEBUG] 08:44:04.430 io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+[DEBUG] 08:44:04.431 io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+[DEBUG] 08:44:04.597 io.netty.util.NetUtilInitializations - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[DEBUG] 08:44:04.600 io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[DEBUG] 08:44:04.791 io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 00:e2:69:ff:fe:57:eb:23 (auto-detected)
+[DEBUG] 08:44:04.820 io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+[DEBUG] 08:44:04.820 io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+[DEBUG] 08:44:04.954 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 8
+[DEBUG] 08:44:04.954 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 8
+[DEBUG] 08:44:04.955 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+[DEBUG] 08:44:04.955 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+[DEBUG] 08:44:04.955 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+[DEBUG] 08:44:04.955 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+[DEBUG] 08:44:04.956 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+[DEBUG] 08:44:04.956 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[DEBUG] 08:44:04.956 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+[DEBUG] 08:44:04.956 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[DEBUG] 08:44:04.957 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+[DEBUG] 08:44:04.957 io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[DEBUG] 08:44:04.982 io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+[DEBUG] 08:44:04.983 io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+[DEBUG] 08:44:04.983 io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[INFO ] 08:44:05.022 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e] REGISTERED
+[INFO ] 08:44:05.027 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e] BIND: 0.0.0.0/0.0.0.0:8885
+[INFO ] 08:44:05.036 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] ACTIVE
+[INFO ] 08:44:05.040 io.netty.handler.logging.LoggingHandler - [id: 0x68bb4d90] REGISTERED
+[INFO ] 08:44:05.041 io.netty.handler.logging.LoggingHandler - [id: 0x68bb4d90] BIND: 0.0.0.0/0.0.0.0:9995
+[INFO ] 08:44:05.042 cn.wizzer.iot.mqtt.server.broker.server.BrokerServer - MQTT Broker [mqttwk] is up and running. Open Port: 8885 WebSocketPort: 9995
+[INFO ] 08:44:05.042 io.netty.handler.logging.LoggingHandler - [id: 0x68bb4d90, L:/0:0:0:0:0:0:0:0:9995] ACTIVE
+[INFO ] 08:44:05.056 org.eclipse.jetty.server.Server - jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 1.8.0_121-b13
+[INFO ] 08:44:05.443 org.eclipse.jetty.annotations.AnnotationConfiguration - Scanning elapsed time=4ms
+[INFO ] 08:44:05.461 org.eclipse.jetty.webapp.StandardDescriptorProcessor - NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+[INFO ] 08:44:05.519 org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+[INFO ] 08:44:05.519 org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+[INFO ] 08:44:05.529 org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+[DEBUG] 08:44:05.583 org.nutz.ioc.impl.NutIoc - Get 'nutFilterStarter'<interface org.nutz.boot.starter.WebFilterFace>
+[DEBUG] 08:44:05.583 org.nutz.ioc.impl.NutIoc - Get 'whaleFilterStarter'<interface org.nutz.boot.starter.WebFilterFace>
+[DEBUG] 08:44:05.589 org.nutz.ioc.impl.NutIoc - Get 'whaleFilter'<class org.nutz.mvc.WhaleFilter>
+[DEBUG] 08:44:05.591 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=whaleFilter
+[DEBUG] 08:44:05.592 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(whaleFilter) in AnnotationIocLoader(packages=[org.nutz.boot.starter])
+[DEBUG] 08:44:05.593 org.nutz.ioc.impl.NutIoc - 	 >> Make...'whaleFilter'<class org.nutz.mvc.WhaleFilter>
+[DEBUG] 08:44:05.595 org.nutz.ioc.impl.ScopeContext - Save object 'whaleFilter' to [app] 
+[DEBUG] 08:44:05.602 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.nutz.mvc.WhaleFilter without AOP
+[DEBUG] 08:44:05.604 org.nutz.ioc.impl.NutIoc - Get 'whaleFilterStarter'<>
+[DEBUG] 08:44:05.612 org.nutz.ioc.impl.NutIoc - Get 'whaleFilter'<class org.nutz.mvc.WhaleFilter>
+[DEBUG] 08:44:05.616 org.nutz.boot.starter.servlet3.NbServletContextListener - add filter name=whale pathSpec=/*
+[DEBUG] 08:44:05.617 org.nutz.ioc.impl.NutIoc - Get 'nutFilter'<class org.nutz.mvc.NutFilter>
+[DEBUG] 08:44:05.618 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=nutFilter
+[DEBUG] 08:44:05.618 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(nutFilter) in AnnotationIocLoader(packages=[org.nutz.boot.starter])
+[DEBUG] 08:44:05.619 org.nutz.ioc.impl.NutIoc - 	 >> Make...'nutFilter'<class org.nutz.mvc.NutFilter>
+[DEBUG] 08:44:05.619 org.nutz.ioc.impl.ScopeContext - Save object 'nutFilter' to [app] 
+[DEBUG] 08:44:05.621 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.nutz.mvc.NutFilter without AOP
+[DEBUG] 08:44:05.621 org.nutz.ioc.impl.NutIoc - Get 'nutFilterStarter'<>
+[DEBUG] 08:44:05.627 org.nutz.resource.Scans - Found 1 resource by src( org/nutz/conf/NutzDefaultConfig.js ) , regex( \.(js|json)$ )
+[DEBUG] 08:44:05.629 org.nutz.ioc.impl.NutIoc - Get 'nutFilter'<class org.nutz.mvc.NutFilter>
+[DEBUG] 08:44:05.630 org.nutz.boot.starter.servlet3.NbServletContextListener - add filter name=nutz pathSpec=/*
+[INFO ] 08:44:05.653 org.nutz.mvc.NutFilter - NutFilter[nutz] starting ...
+[DEBUG] 08:44:05.663 org.nutz.resource.Scans - Locations count=107 time use 3ms
+[DEBUG] 08:44:05.668 org.nutz.mvc.config.AbstractNutConfig - Loading by class org.nutz.boot.starter.nutz.mvc.NbMvcLoading
+[INFO ] 08:44:05.679 org.nutz.mvc.impl.NutLoading - Nutz Version : 1.r.68-SNAPSHOT 
+[INFO ] 08:44:05.680 org.nutz.mvc.impl.NutLoading - Nutz.Mvc[nutz] is initializing ...
+[DEBUG] 08:44:05.680 org.nutz.mvc.impl.NutLoading - Web Container Information:
+[DEBUG] 08:44:05.680 org.nutz.mvc.impl.NutLoading -  - Default Charset : GBK
+[DEBUG] 08:44:05.680 org.nutz.mvc.impl.NutLoading -  - Current . path  : D:\Project_yxx\MqttWk\.
+[DEBUG] 08:44:05.681 org.nutz.mvc.impl.NutLoading -  - Java Version    : 1.8.0_121
+[DEBUG] 08:44:05.681 org.nutz.mvc.impl.NutLoading -  - File separator  : \
+[DEBUG] 08:44:05.681 org.nutz.mvc.impl.NutLoading -  - Timezone        : Asia/Shanghai
+[DEBUG] 08:44:05.681 org.nutz.mvc.impl.NutLoading -  - OS              : Windows 10 amd64
+[DEBUG] 08:44:05.681 org.nutz.mvc.impl.NutLoading -  - ServerInfo      : jetty/9.4.48.v20220622
+[DEBUG] 08:44:05.682 org.nutz.mvc.impl.NutLoading -  - Servlet API     : 3.1
+[DEBUG] 08:44:05.682 org.nutz.mvc.impl.NutLoading -  - ContextPath     : 
+[DEBUG] 08:44:05.683 org.nutz.mvc.impl.NutLoading -  - context.tempdir : D:\Project_yxx\MqttWk\temp
+[DEBUG] 08:44:05.683 org.nutz.mvc.impl.NutLoading -  - MainModule      : cn.wizzer.iot.mqtt.server.broker.MainLauncher
+[INFO ] 08:44:05.684 org.nutz.mvc.config.AbstractNutConfig - /WEB-INF/ not Found?!
+[DEBUG] 08:44:05.702 org.nutz.mvc.impl.NutLoading - >> app.root = ./webapp
+[INFO ] 08:44:05.733 org.nutz.mvc.impl.NutLoading - Build URL mapping by org.nutz.mvc.impl.UrlMappingImpl ...
+[DEBUG] 08:44:05.740 org.nutz.mvc.impl.NutLoading - @Views(DefaultViewMaker.class)
+[DEBUG] 08:44:05.751 org.nutz.boot.starter.nutz.mvc.NbMvcLoading - @ChainBy(org.nutz.mvc.impl.NutActionChainMaker)
+[DEBUG] 08:44:05.801 org.nutz.mvc.impl.Loadings -  > scan 'cn.wizzer.iot'
+[DEBUG] 08:44:05.930 org.nutz.resource.Scans - Found 55 resource by src( cn/wizzer/iot/ ) , regex( ^.+[.]class$ )
+[DEBUG] 08:44:06.006 org.nutz.mvc.impl.Loadings -    >> add 'cn.wizzer.iot.mqtt.server.broker.webapi.WebApiController'
+[DEBUG] 08:44:06.046 org.nutz.mvc.impl.Loadings - module class location 'file:/D:/Project_yxx/MqttWk/mqtt-broker/target/classes/'
+[DEBUG] 08:44:06.048 org.nutz.mvc.impl.Loadings -  > scan 'cn.wizzer.iot.mqtt.server.broker'
+[DEBUG] 08:44:06.068 org.nutz.resource.Scans - Found 26 resource by src( cn/wizzer/iot/mqtt/server/broker/ ) , regex( ^.+[.]class$ )
+[DEBUG] 08:44:06.104 org.nutz.mvc.impl.Loadings -    >> add 'cn.wizzer.iot.mqtt.server.broker.webapi.WebApiController'
+[DEBUG] 08:44:06.106 org.nutz.mvc.impl.NutLoading - Use org.nutz.mvc.impl.NutEntryDeterminer as EntryMethodDeterminer
+[INFO ] 08:44:06.174 org.nutz.mvc.impl.NutActionChainMaker - Optional processor class not found, disabled : org.nutz.integration.shiro.NutShiroProcessor
+[INFO ] 08:44:06.208 org.nutz.mvc.impl.NutActionChainMaker - Optional processor class not found, disabled : org.nutz.plugins.validation.ValidationProcessor
+[DEBUG] 08:44:06.256 org.nutz.mvc.impl.UrlMappingImpl -    '/open/api/mqttwk/info'     >> (WebApiController.java:120).info      : Object     | @Ok(json ) @Fail(null ) | by 0 Filters | (I:UTF-8/O:UTF-8)
+[DEBUG] 08:44:06.295 org.nutz.mvc.impl.UrlMappingImpl -    '/open/api/mqttwk/send'     >> (WebApiController.java:60).send       : Object     | @Ok(json ) @Fail(null ) | by 0 Filters | (I:UTF-8/O:UTF-8)
+[DEBUG] 08:44:06.297 org.nutz.mvc.impl.UrlMappingImpl -    '/open/api/mqttwk/test_send' >> (WebApiController.java:92).test_send  : Object     | @Ok(json ) @Fail(null ) | by 0 Filters | (I:UTF-8/O:UTF-8)
+[INFO ] 08:44:06.298 org.nutz.mvc.impl.NutLoading - Found 3 module methods
+[DEBUG] 08:44:06.298 org.nutz.mvc.impl.NutLoading - Localization: org.nutz.mvc.impl.NutMessageLoader('locales/')  dft<>
+[DEBUG] 08:44:06.309 org.nutz.resource.Scans - Found 0 resource by src( locales/ ) , regex( ^.+[.]properties$ )
+[DEBUG] 08:44:06.310 org.nutz.mvc.impl.NutMessageLoader - Load Messages in 0 resource : [[]]
+[DEBUG] 08:44:06.311 org.nutz.mvc.impl.NutMessageLoader - Message Loaded, size = 0
+[INFO ] 08:44:06.315 org.nutz.mvc.impl.NutLoading - Nutz.Mvc[nutz] is up in 631ms
+[INFO ] 08:44:06.424 org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.w.WebAppContext@3f93e4a8{/,[jar:file:/D:/Repository/org/nutz/nutzboot-starter-jetty/2.4.3-SNAPSHOT/nutzboot-starter-jetty-2.4.3-20220720.060951-38.jar!/META-INF/jetty_resources],AVAILABLE}
+[INFO ] 08:44:06.498 org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@5b11a194{HTTP/1.1, (http/1.1)}{0.0.0.0:8922}
+[INFO ] 08:44:06.500 org.eclipse.jetty.server.Server - Started @9232ms
+[DEBUG] 08:44:06.501 org.nutz.boot.starter.jetty.JettyStarter - Jetty monitor props:
+----------------------------------------------
+http.enable                              : true
+http.port                                : 8922
+http.host                                : 0.0.0.0
+http.idleTimeout                         : 300000
+https.enable                             : false
+welcome_files                            : index.html,index.htm,index.do
+maxFormContentSize                       : 1073741824
+----------------------------------------------
+[DEBUG] 08:44:06.503 org.nutz.ioc.impl.NutIoc - Get 'mainLauncher'<class cn.wizzer.iot.mqtt.server.broker.MainLauncher>
+[DEBUG] 08:44:06.503 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=mainLauncher
+[DEBUG] 08:44:06.504 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(mainLauncher) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:44:06.504 org.nutz.ioc.impl.NutIoc - 	 >> Make...'mainLauncher'<class cn.wizzer.iot.mqtt.server.broker.MainLauncher>
+[DEBUG] 08:44:06.505 org.nutz.ioc.impl.ScopeContext - Save object 'mainLauncher' to [app] 
+[DEBUG] 08:44:06.505 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.broker.MainLauncher without AOP
+[DEBUG] 08:44:06.510 org.nutz.ioc.impl.NutIoc - Get 'conf'<class org.nutz.ioc.impl.PropertiesProxy>
+[DEBUG] 08:44:06.511 org.nutz.ioc.impl.NutIoc - Get 'redisService'<class org.nutz.integration.jedis.RedisService>
+[DEBUG] 08:44:06.511 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=redisService
+[DEBUG] 08:44:06.512 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(redisService) in JsonLoader(paths=[org/nutz/integration/jedis/jedis.js])
+[DEBUG] 08:44:06.512 org.nutz.ioc.impl.NutIoc - 	 >> Make...'redisService'<class org.nutz.integration.jedis.RedisService>
+[DEBUG] 08:44:06.512 org.nutz.ioc.impl.ScopeContext - Save object 'redisService' to [app] 
+[DEBUG] 08:44:06.570 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.nutz.integration.jedis.RedisService without AOP
+[DEBUG] 08:44:07.521 org.nutz.ioc.impl.NutIoc - Get 'jedisAgent'<>
+[DEBUG] 08:44:07.521 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=jedisAgent
+[DEBUG] 08:44:07.522 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(jedisAgent) in JsonLoader(paths=[org/nutz/integration/jedis/jedis.js])
+[DEBUG] 08:44:07.522 org.nutz.ioc.impl.NutIoc - 	 >> Make...'jedisAgent'<>
+[DEBUG] 08:44:07.522 org.nutz.ioc.impl.ScopeContext - Save object 'jedisAgent' to [app] 
+[DEBUG] 08:44:07.523 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.nutz.integration.jedis.JedisAgent without AOP
+[DEBUG] 08:44:07.540 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:44:07.540 org.nutz.ioc.impl.NutIoc - Get 'brokerServer'<class cn.wizzer.iot.mqtt.server.broker.server.BrokerServer>
+[INFO ] 08:44:07.542 org.nutz.boot.NbApp - mqttwk started : 7050ms
+[INFO ] 08:45:23.924 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0x3c491a1f, L:/127.0.0.1:8885 - R:/127.0.0.1:1794]
+[INFO ] 08:45:23.926 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 08:45:23.968 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 08:45:23.968 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=brokerHandler
+[DEBUG] 08:45:23.969 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(brokerHandler) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:23.969 org.nutz.ioc.impl.NutIoc - 	 >> Make...'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 08:45:23.969 org.nutz.ioc.impl.ScopeContext - Save object 'brokerHandler' to [app] 
+[DEBUG] 08:45:23.969 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler without AOP
+[DEBUG] 08:45:23.986 org.nutz.ioc.impl.NutIoc - Get 'protocolProcess'<class cn.wizzer.iot.mqtt.server.broker.protocol.ProtocolProcess>
+[DEBUG] 08:45:23.987 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=protocolProcess
+[DEBUG] 08:45:23.987 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(protocolProcess) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:23.988 org.nutz.ioc.impl.NutIoc - 	 >> Make...'protocolProcess'<class cn.wizzer.iot.mqtt.server.broker.protocol.ProtocolProcess>
+[DEBUG] 08:45:23.988 org.nutz.ioc.impl.ScopeContext - Save object 'protocolProcess' to [app] 
+[DEBUG] 08:45:23.988 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.broker.protocol.ProtocolProcess without AOP
+[DEBUG] 08:45:24.004 org.nutz.ioc.impl.NutIoc - Get 'sessionStoreService'<interface cn.wizzer.iot.mqtt.server.common.session.ISessionStoreService>
+[DEBUG] 08:45:24.005 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=sessionStoreService
+[DEBUG] 08:45:24.005 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(sessionStoreService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.006 org.nutz.ioc.impl.NutIoc - 	 >> Make...'sessionStoreService'<interface cn.wizzer.iot.mqtt.server.common.session.ISessionStoreService>
+[DEBUG] 08:45:24.006 org.nutz.ioc.impl.ScopeContext - Save object 'sessionStoreService' to [app] 
+[DEBUG] 08:45:24.032 org.nutz.ioc.impl.NutIoc - Get 'redisService'<class org.nutz.integration.jedis.RedisService>
+[DEBUG] 08:45:24.033 org.nutz.ioc.impl.NutIoc - Get 'subscribeStoreService'<interface cn.wizzer.iot.mqtt.server.common.subscribe.ISubscribeStoreService>
+[DEBUG] 08:45:24.033 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=subscribeStoreService
+[DEBUG] 08:45:24.033 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(subscribeStoreService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.034 org.nutz.ioc.impl.NutIoc - 	 >> Make...'subscribeStoreService'<interface cn.wizzer.iot.mqtt.server.common.subscribe.ISubscribeStoreService>
+[DEBUG] 08:45:24.034 org.nutz.ioc.impl.ScopeContext - Save object 'subscribeStoreService' to [app] 
+[DEBUG] 08:45:24.034 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.store.subscribe.SubscribeStoreService without AOP
+[DEBUG] 08:45:24.041 org.nutz.ioc.impl.NutIoc - Get 'subscribeNotWildcardCache'<class cn.wizzer.iot.mqtt.server.store.cache.SubscribeNotWildcardCache>
+[DEBUG] 08:45:24.041 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=subscribeNotWildcardCache
+[DEBUG] 08:45:24.041 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(subscribeNotWildcardCache) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.042 org.nutz.ioc.impl.NutIoc - 	 >> Make...'subscribeNotWildcardCache'<class cn.wizzer.iot.mqtt.server.store.cache.SubscribeNotWildcardCache>
+[DEBUG] 08:45:24.042 org.nutz.ioc.impl.ScopeContext - Save object 'subscribeNotWildcardCache' to [app] 
+[DEBUG] 08:45:24.056 org.nutz.ioc.impl.NutIoc - Get 'redisService'<class org.nutz.integration.jedis.RedisService>
+[DEBUG] 08:45:24.057 org.nutz.ioc.impl.NutIoc - Get 'jedisAgent'<class org.nutz.integration.jedis.JedisAgent>
+[DEBUG] 08:45:24.057 org.nutz.ioc.impl.NutIoc - Get 'subscribeWildcardCache'<class cn.wizzer.iot.mqtt.server.store.cache.SubscribeWildcardCache>
+[DEBUG] 08:45:24.058 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=subscribeWildcardCache
+[DEBUG] 08:45:24.058 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(subscribeWildcardCache) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.058 org.nutz.ioc.impl.NutIoc - 	 >> Make...'subscribeWildcardCache'<class cn.wizzer.iot.mqtt.server.store.cache.SubscribeWildcardCache>
+[DEBUG] 08:45:24.058 org.nutz.ioc.impl.ScopeContext - Save object 'subscribeWildcardCache' to [app] 
+[DEBUG] 08:45:24.073 org.nutz.ioc.impl.NutIoc - Get 'redisService'<class org.nutz.integration.jedis.RedisService>
+[DEBUG] 08:45:24.074 org.nutz.ioc.impl.NutIoc - Get 'jedisAgent'<class org.nutz.integration.jedis.JedisAgent>
+[DEBUG] 08:45:24.074 org.nutz.ioc.impl.NutIoc - Get 'authService'<interface cn.wizzer.iot.mqtt.server.common.auth.IAuthService>
+[DEBUG] 08:45:24.074 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=authService
+[DEBUG] 08:45:24.074 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(authService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.075 org.nutz.ioc.impl.NutIoc - 	 >> Make...'authService'<interface cn.wizzer.iot.mqtt.server.common.auth.IAuthService>
+[DEBUG] 08:45:24.075 org.nutz.ioc.impl.ScopeContext - Save object 'authService' to [app] 
+[DEBUG] 08:45:24.075 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.auth.service.AuthService without AOP
+[DEBUG] 08:45:24.128 org.nutz.ioc.impl.NutIoc - Get 'messageIdService'<interface cn.wizzer.iot.mqtt.server.common.message.IMessageIdService>
+[DEBUG] 08:45:24.129 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=messageIdService
+[DEBUG] 08:45:24.129 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(messageIdService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.129 org.nutz.ioc.impl.NutIoc - 	 >> Make...'messageIdService'<interface cn.wizzer.iot.mqtt.server.common.message.IMessageIdService>
+[DEBUG] 08:45:24.129 org.nutz.ioc.impl.ScopeContext - Save object 'messageIdService' to [app] 
+[DEBUG] 08:45:24.130 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.store.message.MessageIdService without AOP
+[DEBUG] 08:45:24.134 org.nutz.ioc.impl.NutIoc - Get 'redisService'<class org.nutz.integration.jedis.RedisService>
+[DEBUG] 08:45:24.135 org.nutz.ioc.impl.NutIoc - Get 'jedisPool'<class redis.clients.util.Pool>
+[DEBUG] 08:45:24.135 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=jedisPool
+[DEBUG] 08:45:24.136 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(jedisPool) in JsonLoader(paths=[org/nutz/integration/jedis/jedis.js])
+[DEBUG] 08:45:24.136 org.nutz.ioc.impl.NutIoc - 	 >> Make...'jedisPool'<class redis.clients.util.Pool>
+[DEBUG] 08:45:24.136 org.nutz.ioc.impl.ScopeContext - Save object 'jedisPool' to [app] 
+[DEBUG] 08:45:24.150 org.nutz.ioc.impl.NutIoc - Get 'jedisPoolConfig'<>
+[DEBUG] 08:45:24.150 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=jedisPoolConfig
+[DEBUG] 08:45:24.151 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(jedisPoolConfig) in JsonLoader(paths=[org/nutz/integration/jedis/jedis.js])
+[DEBUG] 08:45:24.151 org.nutz.ioc.impl.NutIoc - 	 >> Make...'jedisPoolConfig'<>
+[DEBUG] 08:45:24.151 org.nutz.ioc.impl.ScopeContext - Save object 'jedisPoolConfig' to [app] 
+[DEBUG] 08:45:24.152 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class redis.clients.jedis.JedisPoolConfig without AOP
+[DEBUG] 08:45:24.152 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.191 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.191 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.192 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.192 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.192 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.192 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.195 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class redis.clients.jedis.JedisPool without AOP
+[DEBUG] 08:45:24.197 org.nutz.ioc.impl.NutIoc - Get 'jedisPoolConfig'<>
+[DEBUG] 08:45:24.197 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.198 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.198 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.198 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.198 org.nutz.ioc.impl.NutIoc - Get 'conf'<>
+[DEBUG] 08:45:24.349 org.nutz.ioc.val.ReferTypeValue - name=messageStoreService not found, search for type=cn.wizzer.iot.mqtt.server.common.message.IRetainMessageStoreService
+[DEBUG] 08:45:24.349 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(txREPEATABLE_READ) in TransIocLoader@859447712
+[DEBUG] 08:45:24.350 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(txSERIALIZABLE) in TransIocLoader@859447712
+[DEBUG] 08:45:24.350 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(txNONE) in TransIocLoader@859447712
+[DEBUG] 08:45:24.350 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(txREAD_UNCOMMITTED) in TransIocLoader@859447712
+[DEBUG] 08:45:24.350 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(txREAD_COMMITTED) in TransIocLoader@859447712
+[DEBUG] 08:45:24.351 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject($aop_async) in AsyncAopIocLoader@713656449
+[DEBUG] 08:45:24.351 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(kafkaProducer) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.352 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(webApiController) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.352 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(sessionStoreService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.352 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(redisCluster) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.352 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(channelIdMap) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.352 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(dupPublishMessageStoreService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.353 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(storeStarter) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.353 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(brokerHandler) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.353 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(dupPubRelMessageStoreService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.353 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(authService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.353 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(internalCommunication) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.354 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(subscribeWildcardCache) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.354 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(protocolProcess) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.354 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(dupPubRelMessageCache) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.354 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(brokerProperties) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.354 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(channelGroup) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.355 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(retainMessageCache) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.355 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(retainMessageStoreService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.355 org.nutz.ioc.impl.NutIoc - Get 'retainMessageStoreService'<interface cn.wizzer.iot.mqtt.server.common.message.IRetainMessageStoreService>
+[DEBUG] 08:45:24.355 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=retainMessageStoreService
+[DEBUG] 08:45:24.355 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(retainMessageStoreService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.355 org.nutz.ioc.impl.NutIoc - 	 >> Make...'retainMessageStoreService'<interface cn.wizzer.iot.mqtt.server.common.message.IRetainMessageStoreService>
+[DEBUG] 08:45:24.356 org.nutz.ioc.impl.ScopeContext - Save object 'retainMessageStoreService' to [app] 
+[DEBUG] 08:45:24.356 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.store.message.RetainMessageStoreService without AOP
+[DEBUG] 08:45:24.364 org.nutz.ioc.impl.NutIoc - Get 'retainMessageCache'<class cn.wizzer.iot.mqtt.server.store.cache.RetainMessageCache>
+[DEBUG] 08:45:24.364 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=retainMessageCache
+[DEBUG] 08:45:24.364 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(retainMessageCache) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.364 org.nutz.ioc.impl.NutIoc - 	 >> Make...'retainMessageCache'<class cn.wizzer.iot.mqtt.server.store.cache.RetainMessageCache>
+[DEBUG] 08:45:24.365 org.nutz.ioc.impl.ScopeContext - Save object 'retainMessageCache' to [app] 
+[DEBUG] 08:45:24.377 org.nutz.ioc.impl.NutIoc - Get 'redisService'<class org.nutz.integration.jedis.RedisService>
+[DEBUG] 08:45:24.378 org.nutz.ioc.impl.NutIoc - Get 'conf'<class org.nutz.ioc.impl.PropertiesProxy>
+[DEBUG] 08:45:24.378 org.nutz.ioc.impl.NutIoc - Get 'jedisAgent'<class org.nutz.integration.jedis.JedisAgent>
+[DEBUG] 08:45:24.378 org.nutz.ioc.impl.NutIoc - Get 'dupPublishMessageStoreService'<interface cn.wizzer.iot.mqtt.server.common.message.IDupPublishMessageStoreService>
+[DEBUG] 08:45:24.378 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=dupPublishMessageStoreService
+[DEBUG] 08:45:24.379 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(dupPublishMessageStoreService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.379 org.nutz.ioc.impl.NutIoc - 	 >> Make...'dupPublishMessageStoreService'<interface cn.wizzer.iot.mqtt.server.common.message.IDupPublishMessageStoreService>
+[DEBUG] 08:45:24.379 org.nutz.ioc.impl.ScopeContext - Save object 'dupPublishMessageStoreService' to [app] 
+[DEBUG] 08:45:24.379 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.store.message.DupPublishMessageStoreService without AOP
+[DEBUG] 08:45:24.387 org.nutz.ioc.impl.NutIoc - Get 'messageIdService'<interface cn.wizzer.iot.mqtt.server.common.message.IMessageIdService>
+[DEBUG] 08:45:24.387 org.nutz.ioc.impl.NutIoc - Get 'dupPublishMessageCache'<class cn.wizzer.iot.mqtt.server.store.cache.DupPublishMessageCache>
+[DEBUG] 08:45:24.387 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=dupPublishMessageCache
+[DEBUG] 08:45:24.387 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(dupPublishMessageCache) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.388 org.nutz.ioc.impl.NutIoc - 	 >> Make...'dupPublishMessageCache'<class cn.wizzer.iot.mqtt.server.store.cache.DupPublishMessageCache>
+[DEBUG] 08:45:24.388 org.nutz.ioc.impl.ScopeContext - Save object 'dupPublishMessageCache' to [app] 
+[DEBUG] 08:45:24.400 org.nutz.ioc.impl.NutIoc - Get 'redisService'<class org.nutz.integration.jedis.RedisService>
+[DEBUG] 08:45:24.400 org.nutz.ioc.impl.NutIoc - Get 'conf'<class org.nutz.ioc.impl.PropertiesProxy>
+[DEBUG] 08:45:24.401 org.nutz.ioc.impl.NutIoc - Get 'dupPubRelMessageStoreService'<interface cn.wizzer.iot.mqtt.server.common.message.IDupPubRelMessageStoreService>
+[DEBUG] 08:45:24.401 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=dupPubRelMessageStoreService
+[DEBUG] 08:45:24.401 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(dupPubRelMessageStoreService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.401 org.nutz.ioc.impl.NutIoc - 	 >> Make...'dupPubRelMessageStoreService'<interface cn.wizzer.iot.mqtt.server.common.message.IDupPubRelMessageStoreService>
+[DEBUG] 08:45:24.401 org.nutz.ioc.impl.ScopeContext - Save object 'dupPubRelMessageStoreService' to [app] 
+[DEBUG] 08:45:24.402 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.store.message.DupPubRelMessageStoreService without AOP
+[DEBUG] 08:45:24.409 org.nutz.ioc.impl.NutIoc - Get 'messageIdService'<interface cn.wizzer.iot.mqtt.server.common.message.IMessageIdService>
+[DEBUG] 08:45:24.409 org.nutz.ioc.impl.NutIoc - Get 'dupPubRelMessageCache'<class cn.wizzer.iot.mqtt.server.store.cache.DupPubRelMessageCache>
+[DEBUG] 08:45:24.409 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=dupPubRelMessageCache
+[DEBUG] 08:45:24.409 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(dupPubRelMessageCache) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.410 org.nutz.ioc.impl.NutIoc - 	 >> Make...'dupPubRelMessageCache'<class cn.wizzer.iot.mqtt.server.store.cache.DupPubRelMessageCache>
+[DEBUG] 08:45:24.410 org.nutz.ioc.impl.ScopeContext - Save object 'dupPubRelMessageCache' to [app] 
+[DEBUG] 08:45:24.421 org.nutz.ioc.impl.NutIoc - Get 'redisService'<class org.nutz.integration.jedis.RedisService>
+[DEBUG] 08:45:24.421 org.nutz.ioc.impl.NutIoc - Get 'conf'<class org.nutz.ioc.impl.PropertiesProxy>
+[DEBUG] 08:45:24.422 org.nutz.ioc.impl.NutIoc - Get 'internalCommunication'<class cn.wizzer.iot.mqtt.server.broker.internal.InternalCommunication>
+[DEBUG] 08:45:24.422 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=internalCommunication
+[DEBUG] 08:45:24.422 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(internalCommunication) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.422 org.nutz.ioc.impl.NutIoc - 	 >> Make...'internalCommunication'<class cn.wizzer.iot.mqtt.server.broker.internal.InternalCommunication>
+[DEBUG] 08:45:24.422 org.nutz.ioc.impl.ScopeContext - Save object 'internalCommunication' to [app] 
+[DEBUG] 08:45:24.423 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.broker.internal.InternalCommunication without AOP
+[DEBUG] 08:45:24.426 org.nutz.ioc.impl.NutIoc - Get 'brokerProperties'<class cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties>
+[DEBUG] 08:45:24.426 org.nutz.ioc.impl.NutIoc - Get 'kafkaService'<class cn.wizzer.iot.mqtt.server.broker.service.KafkaService>
+[DEBUG] 08:45:24.427 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=kafkaService
+[DEBUG] 08:45:24.427 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(kafkaService) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.427 org.nutz.ioc.impl.NutIoc - 	 >> Make...'kafkaService'<class cn.wizzer.iot.mqtt.server.broker.service.KafkaService>
+[DEBUG] 08:45:24.427 org.nutz.ioc.impl.ScopeContext - Save object 'kafkaService' to [app] 
+[DEBUG] 08:45:24.433 org.nutz.ioc.impl.NutIoc - Get 'kafkaProducer'<class org.apache.kafka.clients.producer.KafkaProducer>
+[DEBUG] 08:45:24.433 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=kafkaProducer
+[DEBUG] 08:45:24.434 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(kafkaProducer) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.434 org.nutz.ioc.impl.NutIoc - 	 >> Make...'kafkaProducer'<class org.apache.kafka.clients.producer.KafkaProducer>
+[DEBUG] 08:45:24.434 org.nutz.ioc.impl.ScopeContext - Save object 'kafkaProducer' to [app] 
+[DEBUG] 08:45:24.477 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.apache.kafka.clients.producer.KafkaProducer without AOP
+[DEBUG] 08:45:24.478 org.nutz.ioc.impl.NutIoc - Get 'storeStarter'<>
+[DEBUG] 08:45:24.478 org.nutz.ioc.impl.NutIoc - Get 'storeStarter'<>
+[DEBUG] 08:45:24.478 org.nutz.ioc.impl.NutIoc - Get 'brokerProperties'<class cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties>
+[DEBUG] 08:45:24.478 org.nutz.ioc.impl.NutIoc - Get 'redisCluster'<class cn.wizzer.iot.mqtt.server.broker.cluster.RedisCluster>
+[DEBUG] 08:45:24.479 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=redisCluster
+[DEBUG] 08:45:24.479 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(redisCluster) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.479 org.nutz.ioc.impl.NutIoc - 	 >> Make...'redisCluster'<class cn.wizzer.iot.mqtt.server.broker.cluster.RedisCluster>
+[DEBUG] 08:45:24.479 org.nutz.ioc.impl.ScopeContext - Save object 'redisCluster' to [app] 
+[DEBUG] 08:45:24.488 org.nutz.ioc.impl.NutIoc - Get 'pubSubService'<class org.nutz.integration.jedis.pubsub.PubSubService>
+[DEBUG] 08:45:24.489 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=pubSubService
+[DEBUG] 08:45:24.489 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(pubSubService) in JsonLoader(paths=[org/nutz/integration/jedis/jedis.js])
+[DEBUG] 08:45:24.489 org.nutz.ioc.impl.NutIoc - 	 >> Make...'pubSubService'<class org.nutz.integration.jedis.pubsub.PubSubService>
+[DEBUG] 08:45:24.490 org.nutz.ioc.impl.ScopeContext - Save object 'pubSubService' to [app] 
+[DEBUG] 08:45:24.491 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class org.nutz.integration.jedis.pubsub.PubSubService without AOP
+[DEBUG] 08:45:24.497 org.nutz.ioc.impl.NutIoc - Get 'jedisAgent'<>
+[DEBUG] 08:45:24.497 org.nutz.ioc.impl.NutIoc - Get 'brokerProperties'<class cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties>
+[DEBUG] 08:45:24.498 org.nutz.ioc.impl.NutIoc - Get 'internalSendServer'<class cn.wizzer.iot.mqtt.server.broker.internal.InternalSendServer>
+[DEBUG] 08:45:24.498 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=internalSendServer
+[DEBUG] 08:45:24.498 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(internalSendServer) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.498 org.nutz.ioc.impl.NutIoc - 	 >> Make...'internalSendServer'<class cn.wizzer.iot.mqtt.server.broker.internal.InternalSendServer>
+[DEBUG] 08:45:24.498 org.nutz.ioc.impl.ScopeContext - Save object 'internalSendServer' to [app] 
+[DEBUG] 08:45:24.499 org.nutz.ioc.aop.impl.DefaultMirrorFactory - Load class cn.wizzer.iot.mqtt.server.broker.internal.InternalSendServer without AOP
+[DEBUG] 08:45:24.503 org.nutz.ioc.impl.NutIoc - Get 'brokerProperties'<class cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties>
+[DEBUG] 08:45:24.503 org.nutz.ioc.impl.NutIoc - Get 'subscribeStoreService'<class cn.wizzer.iot.mqtt.server.store.subscribe.SubscribeStoreService>
+[DEBUG] 08:45:24.503 org.nutz.ioc.impl.NutIoc - Get 'sessionStoreService'<class cn.wizzer.iot.mqtt.server.store.session.SessionStoreService>
+[DEBUG] 08:45:24.504 org.nutz.ioc.impl.NutIoc - Get 'messageIdService'<class cn.wizzer.iot.mqtt.server.store.message.MessageIdService>
+[DEBUG] 08:45:24.504 org.nutz.ioc.impl.NutIoc - Get 'channelGroup'<interface io.netty.channel.group.ChannelGroup>
+[DEBUG] 08:45:24.504 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=channelGroup
+[DEBUG] 08:45:24.504 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(channelGroup) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.504 org.nutz.ioc.impl.NutIoc - 	 >> Make...'channelGroup'<interface io.netty.channel.group.ChannelGroup>
+[DEBUG] 08:45:24.504 org.nutz.ioc.impl.ScopeContext - Save object 'channelGroup' to [app] 
+[DEBUG] 08:45:24.505 org.nutz.ioc.impl.NutIoc - Get 'brokerServer'<>
+[DEBUG] 08:45:24.505 org.nutz.ioc.impl.NutIoc - Get 'channelIdMap'<interface java.util.Map>
+[DEBUG] 08:45:24.505 org.nutz.ioc.impl.NutIoc - 	 >> Load definition name=channelIdMap
+[DEBUG] 08:45:24.506 org.nutz.ioc.loader.combo.ComboIocLoader - Found IocObject(channelIdMap) in AnnotationIocLoader(packages=[cn.wizzer.iot])
+[DEBUG] 08:45:24.506 org.nutz.ioc.impl.NutIoc - 	 >> Make...'channelIdMap'<interface java.util.Map>
+[DEBUG] 08:45:24.506 org.nutz.ioc.impl.ScopeContext - Save object 'channelIdMap' to [app] 
+[DEBUG] 08:45:24.506 org.nutz.ioc.impl.NutIoc - Get 'brokerServer'<>
+[DEBUG] 08:45:24.512 org.nutz.ioc.impl.NutIoc - Get 'brokerProperties'<class cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties>
+[DEBUG] 08:45:24.513 org.nutz.ioc.impl.NutIoc - Get 'channelGroup'<interface io.netty.channel.group.ChannelGroup>
+[DEBUG] 08:45:24.513 org.nutz.ioc.impl.NutIoc - Get 'channelIdMap'<interface java.util.Map>
+[DEBUG] 08:45:24.513 org.nutz.ioc.impl.NutIoc - Get 'brokerProperties'<class cn.wizzer.iot.mqtt.server.broker.config.BrokerProperties>
+[DEBUG] 08:45:24.514 org.nutz.ioc.impl.NutIoc - Get 'channelGroup'<interface io.netty.channel.group.ChannelGroup>
+[DEBUG] 08:45:24.514 org.nutz.ioc.impl.NutIoc - Get 'channelIdMap'<interface java.util.Map>
+[DEBUG] 08:45:24.525 io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+[DEBUG] 08:45:24.525 io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+[DEBUG] 08:45:24.525 io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+[DEBUG] 08:45:24.525 io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+[DEBUG] 08:45:24.543 io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+[DEBUG] 08:45:24.544 io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+[DEBUG] 08:45:24.546 io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@19dee5c1
+[DEBUG] 08:51:28.412 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_reciever, cleanSession: false
+[DEBUG] 08:52:34.145 cn.wizzer.iot.mqtt.server.broker.protocol.Subscribe - SUBSCRIBE - clientId: mqtt_reciever, topFilter: /mqtt/dev/#, QoS: 1
+[INFO ] 08:52:34.206 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0xe67f3da9, L:/127.0.0.1:8885 - R:/127.0.0.1:1875]
+[INFO ] 08:52:34.207 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 08:52:34.218 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 08:53:07.576 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_sender, cleanSession: true
+[INFO ] 08:53:44.184 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0xa0a125bb, L:/127.0.0.1:8885 - R:/127.0.0.1:1892]
+[INFO ] 08:53:44.185 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 08:53:44.193 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 08:54:15.511 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_reciever, cleanSession: false
+[INFO ] 08:59:17.581 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0x4aa4bac7, L:/127.0.0.1:8885 - R:/127.0.0.1:1900]
+[INFO ] 08:59:17.583 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[INFO ] 08:59:22.701 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0xcb727a3a, L:/127.0.0.1:8885 - R:/127.0.0.1:1922]
+[INFO ] 08:59:22.703 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 08:59:22.706 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 08:59:22.706 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 08:59:22.718 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_sender, cleanSession: true
+[DEBUG] 08:59:22.718 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_reciever, cleanSession: false
+[DEBUG] 08:59:42.174 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 2
+[DEBUG] 08:59:44.105 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 1
+[DEBUG] 08:59:53.900 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 2
+[DEBUG] 08:59:53.901 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 3
+[INFO ] 09:03:39.980 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0xdfb75a7f, L:/127.0.0.1:8885 - R:/127.0.0.1:1950]
+[DEBUG] 09:03:39.996 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 4
+[INFO ] 09:03:39.981 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 09:03:40.004 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 09:03:40.042 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 5
+[DEBUG] 09:03:40.045 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_sender, cleanSession: true
+[DEBUG] 09:03:40.049 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 6
+[INFO ] 09:03:41.359 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0xce25faac, L:/127.0.0.1:8885 - R:/127.0.0.1:1967]
+[INFO ] 09:03:41.361 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 09:03:41.367 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 09:03:41.365 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 7
+[DEBUG] 09:03:41.376 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 8
+[DEBUG] 09:03:41.377 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_reciever, cleanSession: false
+[DEBUG] 09:03:41.902 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 9
+[DEBUG] 09:03:41.908 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 10
+[DEBUG] 09:03:47.741 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 11
+[DEBUG] 09:04:19.042 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 12
+[DEBUG] 09:04:19.050 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 1
+[DEBUG] 09:04:19.051 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 3
+[DEBUG] 09:04:19.052 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 4
+[DEBUG] 09:04:19.053 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 5
+[DEBUG] 09:04:19.054 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 6
+[DEBUG] 09:04:19.054 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 7
+[DEBUG] 09:04:19.054 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 13
+[DEBUG] 09:04:19.055 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 8
+[DEBUG] 09:04:19.061 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 8
+[DEBUG] 09:04:23.863 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 14
+[DEBUG] 09:04:23.865 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 9
+[DEBUG] 09:04:23.866 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 10
+[DEBUG] 09:04:23.866 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 11
+[DEBUG] 09:04:23.868 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 12
+[DEBUG] 09:04:23.870 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 13
+[DEBUG] 09:04:23.875 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 15
+[DEBUG] 09:04:23.877 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 14
+[DEBUG] 09:04:36.055 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 15
+[DEBUG] 09:04:36.643 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 16
+[DEBUG] 09:04:43.884 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 16
+[DEBUG] 09:04:46.771 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 17
+[DEBUG] 09:04:51.627 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 17
+[INFO ] 09:05:57.274 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0xc66f43ac, L:/127.0.0.1:8885 - R:/127.0.0.1:1985]
+[INFO ] 09:05:57.275 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 09:05:57.279 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 09:06:02.448 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_reciever, cleanSession: false
+[INFO ] 09:11:06.650 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0xa270c02b, L:/127.0.0.1:8885 - R:/127.0.0.1:1990]
+[INFO ] 09:11:06.652 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 09:11:06.949 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 09:11:07.292 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_sender, cleanSession: true
+[DEBUG] 09:11:07.758 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 18
+[INFO ] 09:11:07.759 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0x91a3601f, L:/127.0.0.1:8885 - R:/127.0.0.1:2022]
+[INFO ] 09:11:07.760 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 09:11:20.526 org.nutz.ioc.impl.NutIoc - Get 'brokerHandler'<class cn.wizzer.iot.mqtt.server.broker.handler.BrokerHandler>
+[DEBUG] 09:11:20.535 cn.wizzer.iot.mqtt.server.broker.protocol.Connect - CONNECT - clientId: mqtt_reciever, cleanSession: false
+[DEBUG] 09:11:22.120 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 19
+[DEBUG] 09:11:25.208 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 18
+[DEBUG] 09:11:25.209 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 19
+[DEBUG] 09:11:32.868 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 20
+[DEBUG] 09:11:33.735 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 20
+[DEBUG] 09:11:34.181 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 21
+[DEBUG] 09:11:37.999 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 22
+[DEBUG] 09:11:50.037 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 22
+[DEBUG] 09:11:50.521 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 23
+[DEBUG] 09:11:51.524 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 24
+[DEBUG] 09:11:51.931 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 23
+[DEBUG] 09:11:51.934 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 24
+[DEBUG] 09:11:52.118 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 25
+[DEBUG] 09:17:24.059 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 25
+[INFO ] 09:17:24.060 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ: [id: 0x81d1b01a, L:/127.0.0.1:8885 - R:/127.0.0.1:2039]
+[INFO ] 09:17:24.061 io.netty.handler.logging.LoggingHandler - [id: 0x7765939e, L:/0:0:0:0:0:0:0:0:8885] READ COMPLETE
+[DEBUG] 09:17:24.068 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 26
+[DEBUG] 09:17:24.086 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 27
+[DEBUG] 09:17:24.106 cn.wizzer.iot.mqtt.server.broker.protocol.Publish - PUBLISH - clientId: mqtt_reciever, topic: /mqtt/dev/dev00001, Qos: 1, messageId: 28
+[DEBUG] 09:17:24.110 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 21
+[DEBUG] 09:17:24.111 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 26
+[DEBUG] 09:17:24.112 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 27
+[DEBUG] 09:17:24.125 cn.wizzer.iot.mqtt.server.broker.protocol.PubAck - PUBACK - clientId: mqtt_reciever, messageId: 28

@@ -16,6 +16,8 @@ import org.nutz.ioc.loader.annotation.IocBean;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 订阅存储服务
@@ -60,7 +62,8 @@ public class SubscribeStoreService implements ISubscribeStoreService {
         if (list.size() > 0) {
             subscribeStores.addAll(list);
         }
-        subscribeWildcardCache.all().forEach((topicFilter, map) -> {
+        Map<String, ConcurrentHashMap<String, SubscribeStore>> all = subscribeWildcardCache.all();
+        all.forEach((topicFilter, map) -> {
             if (StrUtil.split(topic, '/').size() >= StrUtil.split(topicFilter, '/').size()) {
                 List<String> splitTopics = StrUtil.split(topic, '/');//a
                 List<String> spliteTopicFilters = StrUtil.split(topicFilter, '/');//#
